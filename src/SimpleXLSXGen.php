@@ -348,6 +348,7 @@ class SimpleXLSXGen {
 				$ROWS[] = $row . "</row>\r\n";
 			}
 			foreach ( $COL as $k => $max ) {
+//				$COLS[] = '<col min="'.$k.'" max="'.$k.'" width="'.min( $max+1, 60).'" bestFit="true" customWidth="true" />';
 				$COLS[] = '<col min="'.$k.'" max="'.$k.'" width="'.min( $max+1, 60).'" />';
 			}
 			$REF = 'A1:'.$this->num2name(count($COLS)) . $CUR_ROW;
